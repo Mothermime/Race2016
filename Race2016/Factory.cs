@@ -8,31 +8,40 @@ namespace Race2016
 {
    public static class Factory
     {
-        public static Sovereigns ChooseSovereign(int ID)
+        public static int BackerNumber;
+        public static Sovereigns ChooseSovereign(string ID)
         {
             switch (ID)
             {
-                case 0:
+                case "King Esurience":
+                    BackerNumber = 0;
                     return new Esurience();
 
-                case 1:
+                case "Queen Cupidity":
+                    BackerNumber = 1;
                     return new Cupidity();
-                case 2:
+                case "King Rapacity":
+                    BackerNumber = 2;
                     return new Rapacity();
             }
             return new Esurience();
         }
-        public static Shipping ChooseShip(int ShipID)
+        public static int  ShipNumber;
+        public static Shipping ChooseShip(string ShipID)
         {
             switch (ShipID)
             {
-                case 0:
+                case "Sapphire":
+                    ShipNumber = 0;
                     return new Sapphire();
-                case 1:
+                case "Ruby":
+                    ShipNumber = 1;
                     return new Ruby();
-                case 2:
+                case "Emerald":
+                    ShipNumber = 2;
                     return new Emerald();
-                case 3:
+                case "Topaz":
+                    ShipNumber = 3;
                     return new Topaz();
             }
             return new Sapphire();

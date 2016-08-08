@@ -19,7 +19,7 @@ namespace Race2016
 {
     public partial class Form1 : Form, IShipping
     {
-        
+        private RadioButton rbChosenSovereign;
         Sapphire mySapphire = new Sapphire();
         Ruby myRuby = new Ruby();
         Emerald myEmerald =  new Emerald();
@@ -33,19 +33,11 @@ namespace Race2016
             //Ship position 0
             string sapphiredata = mySapphire.ShipPath[PathCounter];
             string rubydata = myRuby.ShipPath[PathCounter];
-           string emeralddata = myEmerald.ShipPath[PathCounter];
+            string emeralddata = myEmerald.ShipPath[PathCounter];
             string topazdata = myTopaz.ShipPath[PathCounter];
-            //this.pbBlue.Left = 1215;
-            //this.pbBlue.Top = 1;
-            //this.pbRed.Left = 1215;
-            //this.pbRed.Top = 673;
-            //this.pbGreen.Left = 0;
-            //this.pbGreen.Top = 674;
-            //this.pbYellow.Left = 0;
-            //this.pbYellow.Top = 1;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSetSail_Click(object sender, EventArgs e)
         {
             Random myrandom = new Random() ;
             do {
@@ -127,9 +119,12 @@ namespace Race2016
             pbGreenThumb.Left = Convert.ToInt16(GreenThumbdata[0]);
             pbGreenThumb.Top = Convert.ToInt16(GreenThumbdata[1]);
             PiratePathCounter += 1;
-
-            //pbBlue = mySapphire.ShipPath;
-            //mySapphire.PiratePath;
+                               }
+        private void rbSovereigns_CheckedChanged (object sender, EventArgs e)
+        {
+            rbChosenSovereign = (RadioButton)sender;
+            if (rbChosenSovereign.Checked == true)
+                Factory.ChooseSovereign(rbChosenSovereign.Text);
         }
         //{//Moving in a spiral. Need more points to make it smoother
         //    Application.DoEvents();

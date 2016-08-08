@@ -8,6 +8,7 @@ namespace Race2016
 {
   public abstract class Shipping
     {
+        public string Name { get; set; }
         public  int PathCounter { get; set; }
         public int PiratePathCounter { get; set; }
         public abstract List<string> ShipPath { get; set; }
