@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backers.Designer.cs">
+      <DependentUpon>Backers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emerald.cs" />
+    <Compile Include="Factory.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +62,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ruby.cs" />
+    <Compile Include="Sapphire.cs" />
+    <Compile Include="Shipping.cs" />
+    <Compile Include="Sovereigns.cs" />
+    <Compile Include="Topaz.cs" />
+    <EmbeddedResource Include="Backers.resx">
+      <DependentUpon>Backers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +81,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +96,94 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\98793b98057260d99bb3ed383c9657bb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pirate ship blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pirate ship green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirate island edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirate island edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirate island edit 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirate island edit 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirate island edit 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirate island edit 31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirate island edit 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirate island  background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow edit 4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pirate ship blue edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pirate ship green edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pirate ship green edit1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README_FIRST.txt" />
+    <None Include="Resources\17440171-illustration-of-Cartoon-pirate-Stock-Vector-drawing.jpg" />
+    <None Include="Resources\imagesYB27Y88A.jpg" />
+    <None Include="Resources\pirate-23739260.jpg" />
+    <None Include="Resources\pirate-clip-art-aceaAXrc4.png" />
+    <None Include="Resources\pirate-clip-art-aceaAXrc41.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\Queen 1.png" />
+    <None Include="Resources\kings-collection-006.jpg" />
+    <None Include="Resources\coin-clip-art-1195425990911699381ArtFavor_Money_stack_of_coins.svg.med.png" />
+    <None Include="Resources\stacks-of-coins-clipart-1.jpg.png" />
+    <None Include="Resources\gold_PNG10971.png" />
+    <None Include="Resources\BlueBeard.png" />
+    <None Include="Resources\BlueBeard1.png" />
+    <None Include="Resources\GreenThmb.jpg" />
+    <None Include="Resources\pirate-23739260edit.jpg" />
+    <None Include="Resources\YellowBellyediy.png" />
+    <None Include="Resources\Coin pile 12.jpg" />
+    <None Include="Resources\coin stack edit.png" />
+    <None Include="Resources\coin stack edit 11.png" />
+    <None Include="Resources\coin stack edit 10.png" />
+    <None Include="Resources\coin stack edit 10a.png" />
+    <None Include="Resources\coin stack edit 9.png" />
+    <None Include="Resources\coin stack edit 7a.png" />
+    <None Include="Resources\coin stack edit 8a.png" />
+    <None Include="Resources\coin stack edit 6.png" />
+    <None Include="Resources\coin stack edit 5.png" />
+    <None Include="Resources\coin stack edit 4.png" />
+    <None Include="Resources\coin stack edit 3.png" />
+    <None Include="Resources\coin stack edit 2.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
