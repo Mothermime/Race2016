@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox1.Text" xml:space="preserve">
+  <data name="tbInstructions.Text" xml:space="preserve">
     <value>These Sovereigns are prepared to finance expeditions to add to their wealth by whatever means - scrupulous or not.
 They have heard there is priceless treasure buried on a far off island.  
 Each is looking for a captain and crew to sail there before anyone else does.

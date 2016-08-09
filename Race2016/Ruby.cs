@@ -16,6 +16,7 @@ namespace Race2016
         
         public Ruby()
         {
+            Name = "Ruby";
             ShipPath = Rubysail();
             PiratePath = RedCoatPath();// PathCounter += 1;
         }

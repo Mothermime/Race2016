@@ -9,17 +9,17 @@ namespace Race2016
     class Sapphire : Shipping, IShipping
     {
 
-        
+    
 
         public override List<string> ShipPath { get; set; }
 
 
         public Sapphire()
         {
+            Name = "Sapphire";
             ShipPath = SapphireSail();
             PiratePath = BlueBeard();
-           
-
+                     
         }
 
 

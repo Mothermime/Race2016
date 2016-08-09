@@ -16,6 +16,7 @@ namespace Race2016
         public override List<string> PiratePath { get; set; }
         public Emerald()
         {
+            Name = "Emerald";
             ShipPath = Emeraldsail();
             PiratePath = GreenThumbPath();
         }

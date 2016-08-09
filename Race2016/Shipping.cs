@@ -15,8 +15,14 @@ namespace Race2016
         public abstract List<string> PiratePath { get; set; }
         public PictureBox MyPictureBox = null;
         public int Location = 0;
-        public Random Randomizer;
+        public  Random Randomizer;
         public int StartingPosition;
+        public bool HasFinished = false;
+        public bool HasArrived = false;
+        public static implicit operator Shipping(PictureBox v)
+        {
+            throw new NotImplementedException();
+        }
         
         //{
         //string shipdata = ShipPath[PathCounter];

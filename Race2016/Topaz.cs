@@ -14,6 +14,7 @@ namespace Race2016
 
         public Topaz()
         {
+            Name = "Topaz";
             ShipPath = Topazsail();
             PiratePath = YellowBellyPath();
         }

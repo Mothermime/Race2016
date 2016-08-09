@@ -20,112 +20,279 @@ namespace Race2016
     public partial class Form1 : Form, IShipping
     {
         private RadioButton rbChosenSovereign;
-        Sapphire mySapphire = new Sapphire();
-        Ruby myRuby = new Ruby();
-        Emerald myEmerald =  new Emerald();
-        Topaz myTopaz = new Topaz();
+        private RadioButton rbChosenPirate;
+
+        Shipping[] Ship = new Shipping[4];
+        Shipping[] Pirate = new Shipping[4];
+        Random myRandom = new Random();
+
 
         int PathCounter = 0;
         int PiratePathCounter = 0;
+        private int Winner = 5;
+
+        int shipsLand = 0;
+        int piratesArrive = 0;
         public Form1()
         {
             InitializeComponent();
             //Ship position 0
-            string sapphiredata = mySapphire.ShipPath[PathCounter];
-            string rubydata = myRuby.ShipPath[PathCounter];
-            string emeralddata = myEmerald.ShipPath[PathCounter];
-            string topazdata = myTopaz.ShipPath[PathCounter];
+            //string sapphiredata = mySapphire.ShipPath[PathCounter];
+            //string rubydata = myRuby.ShipPath[PathCounter];
+            //string emeralddata = myEmerald.ShipPath[PathCounter];
+            //string topazdata = myTopaz.ShipPath[PathCounter];
+
+
+            Ship[0] = new Sapphire();
+            Ship[1] = new Ruby();
+            Ship[2] = new Emerald();
+            Ship[3] = new Topaz();
+            Ship[0].MyPictureBox = pbBlue;
+            Ship[1].MyPictureBox = pbRed;
+            Ship[2].MyPictureBox = pbGreen;
+            Ship[3].MyPictureBox = pbYellow;
         }
 
         private void btnSetSail_Click(object sender, EventArgs e)
         {
-            Random myrandom = new Random() ;
-            do {
-                SetSail(); }
-            while
-         (PathCounter < 49
-         );
-            pbBluebeard.Visible = true;
-            pbRedCoat.Visible = true;
-            pbYellowBelly.Visible = true;
-            pbGreenThumb.Visible = true;
             do
             {
-                FindTreasure();
-            } while (PiratePathCounter < 13);
+                SetSail();
+            }
+            //      while  (Ship[0].HasFinished==false && Ship[1].HasFinished == false && Ship[2].HasFinished == false && Ship[3].HasFinished == false);
+           while (shipsLand < 4 && piratesArrive < 4);
 
-            //Trying out how to get the pictures to move diagonally first
-            //Slow them down
-            //Application.DoEvents();
-            //System.Threading.Thread.Sleep(300);
-
-            //this.pbBlue.Left = (this.pbBlue.Left - 10);
-            //this.pbBlue.Top = (this.pbBlue.Top + 10);
-            //this.pbRed.Left = (this.pbRed.Left - 10);
-            //this.pbRed.Top = (this.pbRed.Top - 10);
-            //this.pbGreen.Left = (this.pbGreen.Left + 10);
-            //this.pbGreen.Top = (this.pbGreen.Top - 10);
-            //this.pbYellow.Left = (this.pbYellow.Left + 10);
-            //this.pbYellow.Top = (this.pbYellow.Top + 10);
-
+            //pbBluebeard.Visible = true;
+            //pbRedCoat.Visible = true;
+            //pbYellowBelly.Visible = true;
+            //pbGreenThumb.Visible = true;
+            //do
+            //{
+            //    FindTreasure();
+            //} while (PiratePathCounter < 13);
+            // }
         }
+        //Trying out how to get the pictures to move diagonally first
+        //Slow them down
+        //Application.DoEvents();
+        //System.Threading.Thread.Sleep(300);
+
+        //this.pbBlue.Left = (this.pbBlue.Left - 10);
+        //this.pbBlue.Top = (this.pbBlue.Top + 10);
+        //this.pbRed.Left = (this.pbRed.Left - 10);
+        //this.pbRed.Top = (this.pbRed.Top - 10);
+        //this.pbGreen.Left = (this.pbGreen.Left + 10);
+        //this.pbGreen.Top = (this.pbGreen.Top - 10);
+        //this.pbYellow.Left = (this.pbYellow.Left + 10);
+        //this.pbYellow.Top = (this.pbYellow.Top + 10);
+
+        //}
         public void SetSail()
         {
-            Application.DoEvents();
-            System.Threading.Thread.Sleep(150);
-            //make a counter to count through the list
-            string sapphiredata = mySapphire.ShipPath[PathCounter];
-            string rubydata = myRuby.ShipPath[PathCounter];
-            string emeralddata = myEmerald.ShipPath[PathCounter];
-            string topazdata = myTopaz.ShipPath[PathCounter];
-            //split the path into left and top  
-            string[] moresapphiredata = sapphiredata.Split(',');
-            string[] morerubydata = rubydata.Split(',');
-         string[] moreemeralddata = emeralddata.Split(',');
-            string[] moretopazdata = topazdata.Split(',');
+            for (int i = 0; i < 4; i++)
+            {
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(100);
 
-            //attach to picturebox
-            pbBlue.Left = Convert.ToInt16(moresapphiredata[0]);
-            pbBlue.Top = Convert.ToInt16(moresapphiredata[1]);
-            pbRed.Left = Convert.ToInt16(morerubydata[0]);
-            pbRed.Top = Convert.ToInt16(morerubydata[1]);
-            pbGreen.Left = Convert.ToInt16(moreemeralddata[0]);
-            pbGreen.Top = Convert.ToInt16(moreemeralddata[1]);
-            pbYellow.Left = Convert.ToInt16(moretopazdata[0]);
-            pbYellow.Top = Convert.ToInt16(moretopazdata[1]);
+                //make a counter to count through the list
+
+                if (Ship[i].PathCounter >= 48) //&& Ship[i].HasFinished == false)
+                {                   
+                    ////when all ship reached destination
+                    Ship[i].HasFinished = true;
+                 
+                    switch (Ship[i].Name)
+                    {
+
+                        case "Sapphire":
+                            pbBluebeard.Visible = true;
+                            BluebeardTrack();
+                            //run method that makes pirate fo
+                            break;
+                        case "Ruby":
+                            pbRedCoat.Visible = true;
+
+                            RedCoatTrack();
+                            break;
+                        case "Emerald":
+
+                            pbGreenThumb.Visible = true;
+                            GreenThumbTrack();
+                            break;
+                        case "Topaz":
+                            pbYellowBelly.Visible = true;
+                            YellowBellyTrack();
+                            break;
+                            
+                    }
+                  //// if (Pirate[i].PiratePathCounter >= 13) Pirate[i].HasArrived = true;
+                  //  Winner = i + 1;
+                  // this.Text = Convert.ToString(Winner);
+                    
+                    }
+                
+
+
+                  //shipsLand += 1;
+                 
+                else
+                {
+                    if (Ship[i].PathCounter >= 48)
+                    {
+                        Ship[i].PathCounter = 49;
+                    }
+                    else
+                    { Ship[i].PathCounter += myRandom.Next(0, 2); }
+                }
+
+
+                if (Ship[i].HasFinished == true)
+
+                {
+                    FindTreasure();
+                    //switch (Ship[i].Name)
+                    //{
+
+                    //    case "Sapphire":
+                    //        pbBluebeard.Visible = true;
+                    //        BluebeardTrack();
+                    //        //run method that makes pirate for that ship run
+                    //        break;
+                    //    case "Ruby":
+                    //        pbRedCoat.Visible = true;
+
+                    //        RedCoatTrack();
+                    //        break;
+                    //    case "Emerald":
+
+                    //        pbGreenThumb.Visible = true;
+                    //        GreenThumbTrack();
+                    //        break;
+                    //    case "Topaz":
+                    //        pbYellowBelly.Visible = true;
+                    //        YellowBellyTrack();
+                    //        break;
+                    //}
+                }
+            
+                //string sapphiredata = mySapphire.ShipPath[PathCounter];
+                //string rubydata = myRuby.ShipPath[PathCounter];
+                //string emeralddata = myEmerald.ShipPath[PathCounter];
+                //string topazdata = myTopaz.ShipPath[PathCounter];
+                //split the path into left and top  
+
+                string path = Ship[i].ShipPath[Ship[i].PathCounter];
+
+                string[] pathArray = path.Split(',');
+                Ship[i].MyPictureBox.Left = Convert.ToInt16(pathArray[0]);
+                Ship[i].MyPictureBox.Top = Convert.ToInt16(pathArray[1]);
+            }
+
+            //       string[] moresapphiredata = sapphiredata.Split(',');
+            //   string[] morerubydata = rubydata.Split(',');
+            //string[] moreemeralddata = emeralddata.Split(',');
+            //   string[] moretopazdata = topazdata.Split(',');
+
+            //   //attach to picturebox
+            //   pbBlue.Left = Convert.ToInt16(moresapphiredata[0]);
+            //   pbBlue.Top = Convert.ToInt16(moresapphiredata[1]);
+            //   pbRed.Left = Convert.ToInt16(morerubydata[0]);
+            //   pbRed.Top = Convert.ToInt16(morerubydata[1]);
+            //   pbGreen.Left = Convert.ToInt16(moreemeralddata[0]);
+            //   pbGreen.Top = Convert.ToInt16(moreemeralddata[1]);
+            //   pbYellow.Left = Convert.ToInt16(moretopazdata[0]);
+            //   pbYellow.Top = Convert.ToInt16(moretopazdata[1]);
             //count through path
             PathCounter += 1;
+
+        
+            
         }
         public void FindTreasure()
         {
-            //do same with pirate path
+            //    switch (Name)
+            //{
+
+            //        case "Sapphire":
+            //            pbBluebeard.Visible = true;
+            //    BluebeardTrack();
+            //    //run method that makes pirate for that ship run
+            //    break;
+            //        case "Ruby":
+            //            pbRedCoat.Visible = true;
+
+            //    RedCoatTrack();
+            //    break;
+            //        case "Emerald":
+
+            //            pbGreenThumb.Visible = true;
+            //    GreenThumbTrack();
+            //    break;
+            //        case "Topaz":
+            //            pbYellowBelly.Visible = true;
+            //    YellowBellyTrack();
+            //    break;
+            // }
+        }
+
+
+
+        public void BluebeardTrack()
+        {
             Application.DoEvents();
             System.Threading.Thread.Sleep(200);
-            string Bluebeard = mySapphire.PiratePath[PiratePathCounter];
-        string[] Bluebearddata = Bluebeard.Split(',');
-            string RedCoat = myRuby.PiratePath[PiratePathCounter];
-            string[] RedCoatdata = RedCoat.Split(',');
-            string YellowBelly = myTopaz.PiratePath[PiratePathCounter];
-            string[] YellowBellydata = YellowBelly.Split(',');
-            string GreenThumb = myEmerald.PiratePath[PiratePathCounter];
-            string[] GreenThumbdata = GreenThumb.Split(',');
-
-            pbBluebeard.Left = Convert.ToInt16(Bluebearddata[0]);
+            string Bluebeard = Ship[0].PiratePath[PiratePathCounter];
+            string[] Bluebearddata = Bluebeard.Split(',');
+ pbBluebeard.Left = Convert.ToInt16(Bluebearddata[0]);
             pbBluebeard.Top = Convert.ToInt16(Bluebearddata[1]);
+ PiratePathCounter += 1;
+        }
+        public void RedCoatTrack()
+        {
+            Application.DoEvents();
+            System.Threading.Thread.Sleep(200);
+            string RedCoat = Ship[1].PiratePath[PiratePathCounter];
+                string[] RedCoatdata = RedCoat.Split(',');
             pbRedCoat.Left = Convert.ToInt16(RedCoatdata[0]);
             pbRedCoat.Top = Convert.ToInt16(RedCoatdata[1]);
-            pbYellowBelly.Left = Convert.ToInt16(YellowBellydata[0]);
-            pbYellowBelly.Top = Convert.ToInt16(YellowBellydata[1]);
+            PiratePathCounter += 1;
+        }
+        public void GreenThumbTrack()
+        {
+            Application.DoEvents();
+            System.Threading.Thread.Sleep(200);
+            string GreenThumb = Ship[2].PiratePath[PiratePathCounter];
+         string[] GreenThumbdata = GreenThumb.Split(',');
             pbGreenThumb.Left = Convert.ToInt16(GreenThumbdata[0]);
             pbGreenThumb.Top = Convert.ToInt16(GreenThumbdata[1]);
             PiratePathCounter += 1;
-                               }
+        }
+        public void YellowBellyTrack()
+        {
+            Application.DoEvents();
+            System.Threading.Thread.Sleep(200);
+            string YellowBelly = Ship[3].PiratePath[PiratePathCounter];
+            string[] YellowBellydata = YellowBelly.Split(',');
+            pbYellowBelly.Left = Convert.ToInt16(YellowBellydata[0]);
+            pbYellowBelly.Top = Convert.ToInt16(YellowBellydata[1]);
+            PiratePathCounter += 1;
+        }                                                             
+                                                                
         private void rbSovereigns_CheckedChanged (object sender, EventArgs e)
         {
             rbChosenSovereign = (RadioButton)sender;
             if (rbChosenSovereign.Checked == true)
                 Factory.ChooseSovereign(rbChosenSovereign.Text);
         }
+        private void rbPirates_CheckedChanged(object sender, EventArgs e)
+        {
+            rbChosenPirate = (RadioButton)sender;
+            if (rbChosenPirate.Checked == true)
+                Factory.ChooseShip(rbChosenPirate.Text);
+        }
+
+       
+
         //{//Moving in a spiral. Need more points to make it smoother
         //    Application.DoEvents();
         //    System.Threading.Thread.Sleep(500);
@@ -250,20 +417,20 @@ namespace Race2016
         //    pbGreen.Top = 387;
 
 
-            //PathGeometry animationPath = new PathGeometry();
-            //PathFigure pFigure = new PathFigure();
-            //pFigure.StartPoint = new Point(10, 100);
-            //PolyBezierSegment pBezierSegment = new PolyBezierSegment();
-            //pBezierSegment.Points.Add(new Point(35, 0));
-            //pBezierSegment.Points.Add(new Point(135, 0));
-            //pBezierSegment.Points.Add(new Point(160, 100));
-            //pBezierSegment.Points.Add(new Point(180, 190));
-            //pBezierSegment.Points.Add(new Point(285, 200));
-            //pBezierSegment.Points.Add(new Point(310, 100));
-            //pFigure.Segments.Add(pBezierSegment);
-            //animationPath.Figures.Add(pFigure);
+        //PathGeometry animationPath = new PathGeometry();
+        //PathFigure pFigure = new PathFigure();
+        //pFigure.StartPoint = new Point(10, 100);
+        //PolyBezierSegment pBezierSegment = new PolyBezierSegment();
+        //pBezierSegment.Points.Add(new Point(35, 0));
+        //pBezierSegment.Points.Add(new Point(135, 0));
+        //pBezierSegment.Points.Add(new Point(160, 100));
+        //pBezierSegment.Points.Add(new Point(180, 190));
+        //pBezierSegment.Points.Add(new Point(285, 200));
+        //pBezierSegment.Points.Add(new Point(310, 100));
+        //pFigure.Segments.Add(pBezierSegment);
+        //animationPath.Figures.Add(pFigure);
 
-        }
+    }
 
         //private void bluesail()
 
@@ -386,7 +553,7 @@ namespace Race2016
     //    private void button2_Click(object sender, EventArgs e)
     //    {
     //        bluesail();
-    //    }
+       }
 
      
 
@@ -395,5 +562,5 @@ namespace Race2016
        
 
         
-    }
+    
     
