@@ -8,7 +8,7 @@ namespace Race2016
 {
     class Emerald : Shipping, IShipping
     {
-       public void SetSail()
+        public void SetSail()
         { }
         public override List<string> ShipPath { get; set; }
 
@@ -18,7 +18,7 @@ namespace Race2016
         {
             Name = "Emerald";
             ShipPath = Emeraldsail();
-            PiratePath = GreenThumbPath();
+           PiratePath = GreenThumbPath();
         }
         private List<string> Emeraldsail()
 
@@ -74,6 +74,7 @@ namespace Race2016
             ShipPath.Add("544,402");
             ShipPath.Add("587,413");
             ShipPath.Add("628,414");
+            
             return ShipPath;
         }
         public List<string> GreenThumbPath()
@@ -92,11 +93,12 @@ namespace Race2016
             PiratePath.Add("620,307");
             PiratePath.Add("618,289");
             PiratePath.Add("626,246");
+           
             return PiratePath;
         }
         //public override void SetSail()
         //{
-        //    throw new NotImplementedException();
+        //    //throw new NotImplementedException();
         //}
         public void FindTreasure()
         {

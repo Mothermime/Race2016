@@ -179,6 +179,10 @@
     <None Include="Resources\coin stack edit 4.png" />
     <None Include="Resources\coin stack edit 3.png" />
     <None Include="Resources\coin stack edit 2.png" />
+    <None Include="Resources\14452549-Illustration-of-an-explosion-or-fight-in-comics-vector-illustration--Stock-Vector.jpg" />
+    <None Include="Resources\explosion_cloud_scraps_md_wmedit.jpg" />
+    <None Include="Resources\explosion_cloud_scraps_md_wmedit2.jpg" />
+    <None Include="Resources\explosion_cloud_scraps_md_wmedit3.jpg" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />

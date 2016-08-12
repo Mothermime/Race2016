@@ -63,6 +63,17 @@ namespace Race2016.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _14452549_Illustration_of_an_explosion_or_fight_in_comics_vector_illustration__Stock_Vector {
+            get {
+                object obj = ResourceManager.GetObject("14452549-Illustration-of-an-explosion-or-fight-in-comics-vector-illustration--Sto" +
+                        "ck-Vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _17440171_illustration_of_Cartoon_pirate_Stock_Vector_drawing {
             get {
                 object obj = ResourceManager.GetObject("17440171-illustration-of-Cartoon-pirate-Stock-Vector-drawing", resourceCulture);
@@ -236,6 +247,36 @@ namespace Race2016.Properties {
         internal static System.Drawing.Bitmap coin_stack_edit_9 {
             get {
                 object obj = ResourceManager.GetObject("coin stack edit 9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap explosion_cloud_scraps_md_wmedit {
+            get {
+                object obj = ResourceManager.GetObject("explosion_cloud_scraps_md_wmedit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap explosion_cloud_scraps_md_wmedit2 {
+            get {
+                object obj = ResourceManager.GetObject("explosion_cloud_scraps_md_wmedit2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap explosion_cloud_scraps_md_wmedit3 {
+            get {
+                object obj = ResourceManager.GetObject("explosion_cloud_scraps_md_wmedit3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

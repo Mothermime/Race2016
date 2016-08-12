@@ -40,6 +40,7 @@
             this.pbRedCoat = new System.Windows.Forms.PictureBox();
             this.pbIsland = new System.Windows.Forms.PictureBox();
             this.pbBluebeard = new System.Windows.Forms.PictureBox();
+            this.pbBattle = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBlue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbYellow)).BeginInit();
@@ -49,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbRedCoat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIsland)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBluebeard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBattle)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSetSail
@@ -165,6 +167,18 @@
             this.pbBluebeard.TabStop = false;
             this.pbBluebeard.Visible = false;
             // 
+            // pbBattle
+            // 
+            this.pbBattle.BackColor = System.Drawing.Color.Transparent;
+            this.pbBattle.Image = global::Race2016.Properties.Resources.explosion_cloud_scraps_md_wmedit3;
+            this.pbBattle.Location = new System.Drawing.Point(607, 237);
+            this.pbBattle.Name = "pbBattle";
+            this.pbBattle.Size = new System.Drawing.Size(64, 63);
+            this.pbBattle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBattle.TabIndex = 25;
+            this.pbBattle.TabStop = false;
+            this.pbBattle.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +187,7 @@
             this.BackgroundImage = global::Race2016.Properties.Resources.pirate_island__background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1261, 725);
+            this.Controls.Add(this.pbBattle);
             this.Controls.Add(this.pbBluebeard);
             this.Controls.Add(this.pbRedCoat);
             this.Controls.Add(this.pbGreenThumb);
@@ -195,6 +210,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbRedCoat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIsland)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBluebeard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBattle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,6 +228,7 @@
         private System.Windows.Forms.PictureBox pbRedCoat;
         private System.Windows.Forms.PictureBox pbIsland;
         private System.Windows.Forms.PictureBox pbBluebeard;
+        private System.Windows.Forms.PictureBox pbBattle;
     }
 }
 

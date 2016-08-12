@@ -72,6 +72,19 @@ namespace Race2016
             ShipPath.Add("496,191");
             ShipPath.Add("513,216");
             ShipPath.Add("544,241");
+            ShipPath.Add("553,264");
+            ShipPath.Add("543,274");
+            ShipPath.Add("533,289");
+            ShipPath.Add("543,307");
+            ShipPath.Add("560,314");
+            ShipPath.Add("577,318");
+            ShipPath.Add("589,304");
+            ShipPath.Add("594,285");
+            ShipPath.Add("600,266");
+            ShipPath.Add("609,247");
+            ShipPath.Add("611,228");
+            ShipPath.Add("627,226");
+            ShipPath.Add("635,241");
             return ShipPath;
         }
         public List<string> YellowBellyPath()
@@ -90,12 +103,14 @@ namespace Race2016
             PiratePath.Add("611,228");
             PiratePath.Add("627,226");
             PiratePath.Add("635,241");
+           
             return PiratePath;
         }
+
         public void SetSail()
         {
-            throw new NotImplementedException();
         }
+
         public void FindTreasure()
             {
         }

@@ -124,8 +124,8 @@
   <data name="pirate island edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pirate island edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pirate-clip-art-aceaAXrc41" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pirate-clip-art-aceaAXrc41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pirate ship blue edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pirate ship blue edit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coin stack edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coin stack edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,11 +133,20 @@
   <data name="Pirate ship blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pirate ship blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="explosion_cloud_scraps_md_wmedit2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\explosion_cloud_scraps_md_wmedit2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coin stack edit 7a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coin stack edit 7a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="YellowBellyediy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\YellowBellyediy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coin stack edit 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coin stack edit 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="explosion_cloud_scraps_md_wmedit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\explosion_cloud_scraps_md_wmedit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coin stack edit 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coin stack edit 9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +160,8 @@
   <data name="Coin pile 12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Coin pile 12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coin stack edit 7a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coin stack edit 7a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coin stack edit 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coin stack edit 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pirate ship green edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pirate ship green edit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,17 +178,17 @@
   <data name="Queen 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Queen 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pirate-23739260edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pirate-23739260edit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pirate-clip-art-aceaAXrc41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pirate-clip-art-aceaAXrc41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coin stack edit 10a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coin stack edit 10a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pirate ship blue edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pirate ship blue edit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="coin-clip-art-1195425990911699381ArtFavor_Money_stack_of_coins.svg.med" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coin-clip-art-1195425990911699381ArtFavor_Money_stack_of_coins.svg.med.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pirate island edit 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pirate island edit 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pirate island edit 21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pirate island edit 21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,6 +241,9 @@
   <data name="pirate island edit 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pirate island edit 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="14452549-Illustration-of-an-explosion-or-fight-in-comics-vector-illustration--Stock-Vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\14452549-Illustration-of-an-explosion-or-fight-in-comics-vector-illustration--Stock-Vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="coin stack edit 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coin stack edit 11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -250,10 +262,10 @@
   <data name="coin stack edit 6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coin stack edit 6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pirate island edit 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pirate island edit 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pirate-23739260edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pirate-23739260edit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coin stack edit 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coin stack edit 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="explosion_cloud_scraps_md_wmedit3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\explosion_cloud_scraps_md_wmedit3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

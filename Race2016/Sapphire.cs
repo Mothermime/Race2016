@@ -9,21 +9,21 @@ namespace Race2016
     class Sapphire : Shipping, IShipping
     {
 
-    
+
 
         public override List<string> ShipPath { get; set; }
-
+ public override List<string> PiratePath { get; set; }
 
         public Sapphire()
         {
             Name = "Sapphire";
             ShipPath = SapphireSail();
             PiratePath = BlueBeard();
-                     
+
         }
 
 
-        public override List<string> PiratePath { get; set; }
+     
 
 
         public List<string> SapphireSail()
@@ -100,13 +100,14 @@ namespace Race2016
             PiratePath.Add("689,249");
             PiratePath.Add("672,243");
             PiratePath.Add("655,247");
+            
             return PiratePath;
         }
-        public  void SetSail()
+        public void SetSail()
         {
-            string shipdata = ShipPath[PathCounter];
-            //split the path into left and top  
-            string[] moreshipdata = shipdata.Split(',');
+            //string shipdata = ShipPath[PathCounter];
+            ////split the path into left and top  
+            //string[] moreshipdata = shipdata.Split(',');
 
             //attach to picturebox
             //pbBlue.Left = Convert.ToInt16(moreshipdata[0]);
@@ -116,8 +117,8 @@ namespace Race2016
         }
         public void FindTreasure()
         {
-            string piratedata = PiratePath[PiratePathCounter];
-            string[] morepiratedata = piratedata.Split(',');
+            //string piratedata = PiratePath[PiratePathCounter];
+            //string[] morepiratedata = piratedata.Split(',');
         }
 
     }

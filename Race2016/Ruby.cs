@@ -77,6 +77,7 @@ namespace Race2016
             ShipPath.Add("767,515");
             ShipPath.Add("771,471");
             ShipPath.Add("733,453");
+            ShipPath.Add("733,453");
             return ShipPath;
         }
 
@@ -98,9 +99,9 @@ namespace Race2016
             PiratePath.Add("646,260");
             return PiratePath;
         }
-        public  void SetSail()
+        public void SetSail()
         {
-           
+
         }
         public void FindTreasure()
         {
