@@ -57,13 +57,13 @@ namespace Race2016
 
         private void btnSetSail_Click(object sender, EventArgs e)
         {
-            
+             while (End == false)
             //do
-            {//FindTreasure();
+            //{//FindTreasure();
                 SetSail();
-            } //while (End == false);
-           // while (Ship[0].HasArrived == false) ;
-
+            //} //while (End == false);
+            //while (Ship[0].HasArrived == false && Ship[1].HasArrived == false  && Ship[2].HasArrived == false && Ship[3].HasArrived == false) ;
+            WinningPirate();
         }
 
         //Trying out how to get the pictures to move diagonally first
@@ -72,79 +72,53 @@ namespace Race2016
 
 
         public void SetSail()
-        {
-            //while (End == false)
-            //{
-
-                for (int i = 0; i < 4; i++)
+        {    
+            for (int i = 0; i < 4; i++)
                 {
                     //Make it run
                     Application.DoEvents();
-                //Slow down a bit
-                    System.Threading.Thread.Sleep(10);
-                //split the path array for each ship into left [0] and top [1] points
+                    //Slow down a bit
+                    System.Threading.Thread.Sleep(100);
+                    //split the path array for each ship into left [0] and top [1] points
                     string path = Ship[i].ShipPath[Ship[i].PathCounter];
                     string[] pathArray = path.Split(',');
                     Ship[i].MyPictureBox.Left = Convert.ToInt16(pathArray[0]);
                     Ship[i].MyPictureBox.Top = Convert.ToInt16(pathArray[1]);
-                    
-                    if (Ship[i].PathCounter >= 48) //&& Ship[i].HasFinished == false)
-                    {                      
+
+                    if (Ship[i].PathCounter >= 48)
+                    {
                         Ship[i].HasFinished = true;
                         Ship[i].PiratePb.Visible = true;
-
                     }
-
                     {
-                        if (Ship[i].HasFinished == true)
-                        {
+                        if (Ship[i].HasFinished )
+                      {
+                            Application.DoEvents();
+                            System.Threading.Thread.Sleep(200);
+                            string piratepath = Ship[i].PiratePath[Ship[i].PiratePathCounter];
+                            string[] piratepathArray = piratepath.Split(',');
+                            Ship[i].PiratePb.Left = Convert.ToInt16(piratepathArray[0]);
+                            Ship[i].PiratePb.Top = Convert.ToInt16(piratepathArray[1]);
+                          {
+                                if (Ship[i].PiratePathCounter <= 11)
+                                {
+                                    Ship[i].PiratePathCounter += 1;
+                                }
+                                else if (Ship[i].PiratePathCounter >= 12)
+                                {
+                                    End = true;
+                                    Ship[i].HasArrived = true;
+                                    Winner = i + 1;
+                                    Text = Convert.ToString(Winner);
+                                }
 
-                            
-                            {
-                                //for (int i = 0; i < 4; i++)
-                                //{
-                                    Application.DoEvents();
-                                    System.Threading.Thread.Sleep(200);
-                                    string piratepath = Ship[i].PiratePath[Ship[i].PiratePathCounter];
-                                    string[] piratepathArray = piratepath.Split(',');
-                                    Ship[i].PiratePb.Left = Convert.ToInt16(piratepathArray[0]);
-                                    Ship[i].PiratePb.Top = Convert.ToInt16(piratepathArray[1]);
-                                    if (Ship[i].PiratePathCounter <= 11)
-                                    {
-                                        Ship[i].PiratePathCounter += 1;
-                                    }
-                                    else if (Ship[i].PiratePathCounter >= 11)
-                                    {
-                                        End = true;
-                                        Ship[i].HasArrived = true;
-                                        Winner = i + 1;
-                                        Text = Convert.ToString(Winner);
-                                    }
+                                if (Ship[0].HasArrived && Ship[1].HasArrived && Ship[2].HasArrived && Ship[3].HasArrived)
 
-                                    //else
-                                    //{
-                                    //    SetSail();
-                                    //}
-
-
-
-                                //}
-
-                            } 
-                            if (Ship[0].HasArrived && Ship[1].HasArrived && Ship[2].HasArrived && Ship[3].HasArrived)
-
-                            {
-                                pbBattle.Visible = true;
-                                Ship[i].PiratePb.Visible = false;
+                                {
+                                    pbBattle.Visible = true;
+                                    Ship[i].PiratePb.Visible = false;
+                                }
                             }
-
-                            //if (PiratePathCounter >= 12)
-                            //{
-                            //    PiratePathCounter = 12;
-                            //    End = true;
-                            //    Ship[i].HasArrived = true;
-
-                            //}
                         }
                         else
                         {
@@ -153,12 +127,26 @@ namespace Race2016
                         }
                     }
                 }
-               //make a counter to count through the list
+                //make a counter to count through the list
                 PathCounter += 1;
                 SetSail();
-            }
+           
+        }
 
-        public void FindTreasure()
+        public void WinningPirate()
+        {
+        Winner = myRandom.Next(0, 3);
+
+            Text = Convert.ToString(Winner);
+        }
+            
+      
+//
+//
+//
+//unused code
+        
+  public void FindTreasure()
         {
             do
             {

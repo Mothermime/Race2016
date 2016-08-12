@@ -12,7 +12,8 @@ namespace Race2016
 
 
         public override List<string> ShipPath { get; set; }
- public override List<string> PiratePath { get; set; }
+        public override List<string> PiratePath { get; set; }
+       
 
         public Sapphire()
         {
