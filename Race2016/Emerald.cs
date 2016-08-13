@@ -17,6 +17,7 @@ namespace Race2016
         public Emerald()
         {
             Name = "Emerald";
+            PirateName = "Capt. GreenThumb";
             ShipPath = Emeraldsail();
            PiratePath = GreenThumbPath();
         }

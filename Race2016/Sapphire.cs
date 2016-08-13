@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.VisualStyles;
 
 namespace Race2016
 {
@@ -18,6 +19,7 @@ namespace Race2016
         public Sapphire()
         {
             Name = "Sapphire";
+            PirateName = "Capt. Blubeard";
             ShipPath = SapphireSail();
             PiratePath = BlueBeard();
 

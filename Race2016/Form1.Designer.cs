@@ -41,6 +41,7 @@
             this.pbIsland = new System.Windows.Forms.PictureBox();
             this.pbBluebeard = new System.Windows.Forms.PictureBox();
             this.pbBattle = new System.Windows.Forms.PictureBox();
+            this.tbWinner = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBlue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbYellow)).BeginInit();
@@ -179,6 +180,15 @@
             this.pbBattle.TabStop = false;
             this.pbBattle.Visible = false;
             // 
+            // tbWinner
+            // 
+            this.tbWinner.Font = new System.Drawing.Font("French Script MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbWinner.Location = new System.Drawing.Point(255, 76);
+            this.tbWinner.Name = "tbWinner";
+            this.tbWinner.Size = new System.Drawing.Size(343, 38);
+            this.tbWinner.TabIndex = 26;
+            this.tbWinner.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +197,7 @@
             this.BackgroundImage = global::Race2016.Properties.Resources.pirate_island__background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1261, 725);
+            this.Controls.Add(this.tbWinner);
             this.Controls.Add(this.pbBattle);
             this.Controls.Add(this.pbBluebeard);
             this.Controls.Add(this.pbRedCoat);
@@ -212,6 +223,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBluebeard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBattle)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -229,6 +241,7 @@
         private System.Windows.Forms.PictureBox pbIsland;
         private System.Windows.Forms.PictureBox pbBluebeard;
         private System.Windows.Forms.PictureBox pbBattle;
+        private System.Windows.Forms.TextBox tbWinner;
     }
 }
 

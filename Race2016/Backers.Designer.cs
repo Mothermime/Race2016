@@ -337,10 +337,10 @@
             this.rbBluebeard.AutoSize = true;
             this.rbBluebeard.Location = new System.Drawing.Point(1150, 61);
             this.rbBluebeard.Name = "rbBluebeard";
-            this.rbBluebeard.Size = new System.Drawing.Size(92, 17);
+            this.rbBluebeard.Size = new System.Drawing.Size(101, 17);
             this.rbBluebeard.TabIndex = 41;
             this.rbBluebeard.TabStop = true;
-            this.rbBluebeard.Text = "Cpt Bluebeard";
+            this.rbBluebeard.Text = "Capt. Bluebeard";
             this.rbBluebeard.UseVisualStyleBackColor = true;
             // 
             // rbGreenThumb
@@ -348,10 +348,10 @@
             this.rbGreenThumb.AutoSize = true;
             this.rbGreenThumb.Location = new System.Drawing.Point(1150, 208);
             this.rbGreenThumb.Name = "rbGreenThumb";
-            this.rbGreenThumb.Size = new System.Drawing.Size(114, 17);
+            this.rbGreenThumb.Size = new System.Drawing.Size(117, 17);
             this.rbGreenThumb.TabIndex = 42;
             this.rbGreenThumb.TabStop = true;
-            this.rbGreenThumb.Text = "Cmdr GreenThumb";
+            this.rbGreenThumb.Text = "Cmdr. GreenThumb";
             this.rbGreenThumb.UseVisualStyleBackColor = true;
             // 
             // rbRedCoat
@@ -359,10 +359,10 @@
             this.rbRedCoat.AutoSize = true;
             this.rbRedCoat.Location = new System.Drawing.Point(1149, 354);
             this.rbRedCoat.Name = "rbRedCoat";
-            this.rbRedCoat.Size = new System.Drawing.Size(86, 17);
+            this.rbRedCoat.Size = new System.Drawing.Size(95, 17);
             this.rbRedCoat.TabIndex = 43;
             this.rbRedCoat.TabStop = true;
-            this.rbRedCoat.Text = "Cpt RedCoat";
+            this.rbRedCoat.Text = "Capt. RedCoat";
             this.rbRedCoat.UseVisualStyleBackColor = true;
             // 
             // rbYellowBelly
@@ -370,10 +370,10 @@
             this.rbYellowBelly.AutoSize = true;
             this.rbYellowBelly.Location = new System.Drawing.Point(1150, 505);
             this.rbYellowBelly.Name = "rbYellowBelly";
-            this.rbYellowBelly.Size = new System.Drawing.Size(105, 17);
+            this.rbYellowBelly.Size = new System.Drawing.Size(108, 17);
             this.rbYellowBelly.TabIndex = 44;
             this.rbYellowBelly.TabStop = true;
-            this.rbYellowBelly.Text = "Cmdr YellowBelly";
+            this.rbYellowBelly.Text = "Cmdr. YellowBelly";
             this.rbYellowBelly.UseVisualStyleBackColor = true;
             // 
             // pictureBox10
