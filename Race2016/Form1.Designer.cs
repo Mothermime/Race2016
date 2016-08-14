@@ -42,6 +42,7 @@
             this.pbBluebeard = new System.Windows.Forms.PictureBox();
             this.pbBattle = new System.Windows.Forms.PictureBox();
             this.tbWinner = new System.Windows.Forms.TextBox();
+            this.btnReturn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBlue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbYellow)).BeginInit();
@@ -56,13 +57,13 @@
             // 
             // btnSetSail
             // 
-            this.btnSetSail.Font = new System.Drawing.Font("French Script MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetSail.Font = new System.Drawing.Font("Old English Text MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetSail.Location = new System.Drawing.Point(549, 1);
             this.btnSetSail.Name = "btnSetSail";
             this.btnSetSail.Size = new System.Drawing.Size(160, 49);
             this.btnSetSail.TabIndex = 0;
             this.btnSetSail.Text = "Set Sail";
-            this.btnSetSail.UseVisualStyleBackColor = true;
+            this.btnSetSail.UseVisualStyleBackColor = false;
             this.btnSetSail.Click += new System.EventHandler(this.btnSetSail_Click);
             // 
             // pbRed
@@ -140,7 +141,7 @@
             this.pbRedCoat.Image = global::Race2016.Properties.Resources.pirate_clip_art_aceaAXrc41;
             this.pbRedCoat.Location = new System.Drawing.Point(711, 463);
             this.pbRedCoat.Name = "pbRedCoat";
-            this.pbRedCoat.Size = new System.Drawing.Size(22, 33);
+            this.pbRedCoat.Size = new System.Drawing.Size(22, 23);
             this.pbRedCoat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbRedCoat.TabIndex = 24;
             this.pbRedCoat.TabStop = false;
@@ -150,7 +151,6 @@
             // 
             this.pbIsland.Image = global::Race2016.Properties.Resources.pirate_island_edit_32;
             this.pbIsland.Location = new System.Drawing.Point(369, 140);
-            this.pbIsland.Margin = new System.Windows.Forms.Padding(0);
             this.pbIsland.Name = "pbIsland";
             this.pbIsland.Size = new System.Drawing.Size(531, 447);
             this.pbIsland.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -182,12 +182,24 @@
             // 
             // tbWinner
             // 
-            this.tbWinner.Font = new System.Drawing.Font("French Script MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbWinner.Location = new System.Drawing.Point(255, 76);
+            this.tbWinner.Font = new System.Drawing.Font("Old English Text MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbWinner.Location = new System.Drawing.Point(411, 56);
             this.tbWinner.Name = "tbWinner";
-            this.tbWinner.Size = new System.Drawing.Size(343, 38);
+            this.tbWinner.Size = new System.Drawing.Size(448, 37);
             this.tbWinner.TabIndex = 26;
             this.tbWinner.Visible = false;
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.Font = new System.Drawing.Font("Old English Text MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.Location = new System.Drawing.Point(553, 100);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(160, 76);
+            this.btnReturn.TabIndex = 27;
+            this.btnReturn.Text = "Return with \r\nthe booty.";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Visible = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // Form1
             // 
@@ -197,6 +209,7 @@
             this.BackgroundImage = global::Race2016.Properties.Resources.pirate_island__background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1261, 725);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.tbWinner);
             this.Controls.Add(this.pbBattle);
             this.Controls.Add(this.pbBluebeard);
@@ -210,6 +223,7 @@
             this.Controls.Add(this.btnSetSail);
             this.Controls.Add(this.pbIsland);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pbRed)).EndInit();
@@ -242,6 +256,7 @@
         private System.Windows.Forms.PictureBox pbBluebeard;
         private System.Windows.Forms.PictureBox pbBattle;
         private System.Windows.Forms.TextBox tbWinner;
+        private System.Windows.Forms.Button btnReturn;
     }
 }
 

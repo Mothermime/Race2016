@@ -19,9 +19,12 @@ namespace Race2016
 
         private void btnLoadShips_Click(object sender, EventArgs e)
         {
+            
             Form1 form = new Form1();
             form.Show();
-      // flowLayoutPanel1.
+            tbInstructions.Visible = false;
+            tbResults.Visible = true;
+            // flowLayoutPanel1.
         }
 
         //public void GetPb (int PbID)

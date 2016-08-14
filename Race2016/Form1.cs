@@ -97,14 +97,15 @@ namespace Race2016
                     Ship[i].MyPictureBox.Left = Convert.ToInt16(pathArray[0]);
                     Ship[i].MyPictureBox.Top = Convert.ToInt16(pathArray[1]);
 
-                    if (Ship[i].PathCounter >= 47)
+                    if (Ship[i].PathCounter >= 48)
                     {
-                    //keep looping through path until each ship has reached 49 steps
+                        //keep looping through path until each ship has reached 49 steps
+                        //Ship[i].PathCounter = 49;
                         Ship[i].HasFinished = true;
                         Ship[i].PiratePb.Visible = true;
                     }
                     if (Ship[i].HasFinished)
-                        //when each ship finishes start the pirate along his path
+                    //when each ship finishes start the pirate along his path
                     {//same as ship activate, slow it down
                         Application.DoEvents();
                         System.Threading.Thread.Sleep(200);
@@ -113,9 +114,9 @@ namespace Race2016
                         Ship[i].PiratePb.Left = Convert.ToInt16(piratepathArray[0]);
                         Ship[i].PiratePb.Top = Convert.ToInt16(piratepathArray[1]);
                         {
-                            if (Ship[i].PiratePathCounter <= 11)
-                            {//add one step each time it loops through
-                                Ship[i].PiratePathCounter += 1;
+                            if (Ship[i].PiratePathCounter <= 10)
+                            {//randomize pirates
+                                Ship[i].PiratePathCounter += myRandom.Next(0, 2);
                             }
                             else if (Ship[i].PiratePathCounter >= 12)
                             {
@@ -125,11 +126,12 @@ namespace Race2016
                                 Winner = i + 1;
                                 //display winner on the top of the form
                                 Text = Convert.ToString(Winner);
-
-                                
+                                //show the winner and the button to return to the soveriegns
+                                btnReturn.Visible = true;
                                 tbWinner.Visible = true;
-                                
+                                //put the appropriate name n the winning announcement
                                 tbWinner.Text = Ship[i].PirateName + " " + "has found the treasure!";
+
                                 //if (Ship[0].HasArrived == true && Ship[1].HasArrived == true &&
                                 //    Ship[2].HasArrived == true && Ship[3].HasArrived == true)
 
@@ -139,13 +141,14 @@ namespace Race2016
 
                                 // Finish!!! but they won't stop
 
-                            }
+                            }//add one step each time it loops through
                         }
+                        Ship[i].PiratePathCounter += 1;
                     }
                     else
                     {
                         //move the ship a random distance along the path
-                        Ship[i].PathCounter += myRandom.Next(0, 3);
+                        Ship[i].PathCounter += myRandom.Next(0, 2);
                     }
                 }
 
@@ -156,12 +159,14 @@ namespace Race2016
             }
         }
 
-
-        public void EndFight()
+        private void btnReturn_Click(object sender, EventArgs e)
         {
-            Backers form = new Backers();
-            form.Show();
+            //close the racing form down to return to backers
+            this.Close();
+            //Backers backers = new Backers();
+            //backers.Show();
         }
+
 
         private static string WinningPirate()
 
@@ -321,6 +326,8 @@ namespace Race2016
             }
 
         }
+
+        
     }
 }
 

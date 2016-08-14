@@ -63,6 +63,7 @@
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tbResults = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -433,12 +434,23 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(243, 78);
             this.flowLayoutPanel1.TabIndex = 50;
             // 
+            // tbResults
+            // 
+            this.tbResults.Location = new System.Drawing.Point(21, 139);
+            this.tbResults.Multiline = true;
+            this.tbResults.Name = "tbResults";
+            this.tbResults.Size = new System.Drawing.Size(280, 312);
+            this.tbResults.TabIndex = 52;
+            this.tbResults.Text = "Test text";
+            this.tbResults.Visible = false;
+            // 
             // Backers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1264, 603);
+            this.Controls.Add(this.tbResults);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.pictureBox20);
@@ -539,5 +551,6 @@
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.TextBox tbResults;
     }
 }
